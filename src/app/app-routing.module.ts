@@ -1,34 +1,45 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { PageNotFoundComponent } from './components/layout/page-not-found/page-not-found.component';
-import { AboutComponent } from './components/layout/about/about.component';
-import { HomeComponent } from './components/layout/home/home.component';
+const routes: Routes = [
+  {
+    path: 'login',
+    loadChildren: () => import('./auth/pages/login/login.module').then(m => m.LoginModule)
+  },
+  {
+    path: 'forgot-password',
+    loadChildren: () => import('./auth/pages/forgot-password/forgot-password.module').then(m => m.ForgotPasswordModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./auth/pages/register/register.module').then(m => m.RegisterModule)
+  },
+  {
+    path: 'verification-email',
+    loadChildren: () => import('./auth/pages/send-email/send-email.module').then(m => m.SendEmailModule)
+  },
+  {
+    path: 'pass-email-incorrecto',
+    loadChildren: () => import('./auth/pages/user-pass-incorrecto/user-pass-incorrecto.module').then(m => m.UserPassIncorrectoModule)
+  },
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  }
+]
 
-import { LoginComponent } from './components/auth/login/login.component';
-import { RegisterComponent } from './components/auth/register/register.component';
-import { SendEmailComponent } from './components/auth/send-email/send-email.component';
-// turnos
-import { TurnosBoardComponent } from './components/turnos/turnos-board/turnos-board.component';
-import { TurnosGridComponent } from './components/turnos/turnos-grid/turnos-grid.component';
-import { TurnosListadoComponent } from './components/turnos/turnos-listado/turnos-listado.component';
-// PACIENTES
-import { UserListadoComponent } from './components/pacientes/user-listado/user-listado.component';
-import { HistoriaClinicaComponent } from './components/pacientes/historia-clinica/historia-clinica.component';
-// CPANEL
-import { CpanelBoardComponent } from './components/cpanel/cpanel-board/cpanel-board.component';
-import { CpanelLoginComponent } from './components/cpanel/cpanel-login/cpanel-login.component';
-import { CpanelAdminComponent } from './components/cpanel/cpanel-admin/cpanel-admin.component';
-import { CpanelProfComponent } from './components/cpanel/cpanel-prof/cpanel-prof.component';
-// INSTITUCIONAL
-import { QuienesSomosComponent } from './components/institucional/quienes-somos/quienes-somos.component';
-import { PlanesComponent } from './components/institucional/planes/planes.component';
-import { ContactoComponent } from './components/institucional/contacto/contacto.component';
-import { RrhhComponent } from './components/institucional/rrhh/rrhh.component';
-import { CommonModule } from '@angular/common';
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+
+
+/*
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent , data: {animation: 'home'}},
   { path: 'about', component: AboutComponent },
   { path: 'pageNotFound', component: PageNotFoundComponent },
   { path: 'login', component: LoginComponent ,  data: {animation: 'login'}},
@@ -60,8 +71,75 @@ const routes: Routes = [
   { path: '**', component: PageNotFoundComponent },
 ];
 
+
+*/
+
+
+
+
+
+/*
+
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
+import { BoardComponent } from './games/components/board/board.component';
+
+const routes: Routes = [
+  {
+    path: 'juegos',
+    // loadChildren: () => import('./games/components/board/board.module').then(m => m.BoardModule),
+    component: BoardComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./games/components/layout-games/layout.module').then(m => m.LayoutModuleModule),
+      },
+      {
+        path: 'adivina',
+        loadChildren: () => import('./games/pages/adivina/adivina.module').then(m => m.AdivinaModule),
+      },
+      {
+        path: 'agilidad',
+        loadChildren: () => import('./games/pages/agilidad/agilidad.module').then(m => m.AgilidadModule),
+      }
+      ,
+      {
+        path: 'ppt',
+        loadChildren: () => import('./games/pages/ppt/ppt.module').then(m => m.PptModule),
+      }
+      ,
+      {
+        path: 'tateti',
+        loadChildren: () => import('./games/pages/tateti/tateti.module').then(m => m.TatetiModule),
+      }
+      ,
+      {
+        path: 'anagrama',
+        loadChildren: () => import('./games/pages/anagrama/anagrama.module').then(m => m.AnagramaModule),
+      }
+      ,
+      {
+        path: 'memotest',
+        loadChildren: () => import('./games/pages/memotest/memotest.module').then(m => m.MemotestModule),
+      }
+      ,
+      {
+        path: 'casaca',
+        loadChildren: () => import('./games/pages/casaca/casaca.module').then(m => m.CasacaModule),
+      }
+    ]
+  }
+  ,
+  {
+    path: 'ranking',
+    loadChildren: () => import('./games/components/jugadas-listado/jugadas-listado.module').then(m => m.JugadasListadoModule),
+  }
+];
 @NgModule({
-  imports: [CommonModule, RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+*/
