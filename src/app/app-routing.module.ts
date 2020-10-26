@@ -26,7 +26,14 @@ const routes: Routes = [
     path: '',
     redirectTo: '/home',
     pathMatch: 'full'
-  }
+  },
+  /*
+    { path: 'turnoReserva', component: TurnosBoardComponent },
+     path: 'turnoListado', component: TurnosListadoComponent },
+    { path: 'historiaClinica', component: HistoriaClinicaComponent }, 
+  */
+
+
 ]
 
 
