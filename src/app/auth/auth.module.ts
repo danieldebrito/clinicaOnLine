@@ -4,12 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AuthService } from './auth.service';
-
 import { LoginModule } from './pages/login/login.module';
 import { ForgotPasswordModule } from './pages/forgot-password/forgot-password.module';
 import { RegisterModule } from './pages/register/register.module';
 import { SendEmailModule } from './pages/send-email/send-email.module';
 import { UserPassIncorrectoModule } from './pages/user-pass-incorrecto/user-pass-incorrecto.module';
+import { PermisoDenegadoModule } from './pages/permiso-denegado/permiso-denegado.module';
+
 
 @NgModule({
   declarations: [],
@@ -21,7 +22,8 @@ import { UserPassIncorrectoModule } from './pages/user-pass-incorrecto/user-pass
     ForgotPasswordModule,
     RegisterModule,
     SendEmailModule,
-    UserPassIncorrectoModule
+    UserPassIncorrectoModule,
+    PermisoDenegadoModule
   ],
   exports: [
   ],

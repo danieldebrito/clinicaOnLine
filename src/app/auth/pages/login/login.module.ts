@@ -16,7 +16,6 @@ import { LoginComponent } from './login.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  exports: [],
   providers: [
     AuthService
   ],

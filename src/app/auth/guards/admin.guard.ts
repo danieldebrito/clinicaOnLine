@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
-import { AuthService } from 'src/app/services/auth.service';
+import { AuthService } from 'src/app/auth/auth.service';
 import { take, map, tap } from 'rxjs/operators';
 import { Router } from '@angular/router';
 
@@ -16,7 +16,7 @@ export class AdminGuard implements CanActivate {
   canActivate(): Observable<boolean> | Promise<boolean> | boolean {
     return this.authSvc.user$.pipe(
       take(1),
-      map((user) => user && this.authSvc.isAdmin(user)),
+      map((user) => user && (this.authSvc.isAdministrador(user) || this.authSvc.isAdministrador(user))),
       tap((canEdit) => {
         if (!canEdit) {
           this.router.navigate(['/permisoDenegado']);

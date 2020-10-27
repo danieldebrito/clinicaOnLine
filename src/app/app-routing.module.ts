@@ -23,6 +23,10 @@ const routes: Routes = [
     loadChildren: () => import('./auth/pages/user-pass-incorrecto/user-pass-incorrecto.module').then(m => m.UserPassIncorrectoModule)
   },
   {
+    path: 'permisoDenegado',
+    loadChildren: () => import('./auth/pages/permiso-denegado/permiso-denegado.module').then(m => m.PermisoDenegadoModule)
+  },
+  {
     path: '',
     redirectTo: '/home',
     pathMatch: 'full'
