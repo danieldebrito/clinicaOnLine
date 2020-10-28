@@ -18,3 +18,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .back_marron_oscuro_oscuro {
     background-color: #463333;
 }
+
+.rojo {
+    color :#d7172f;
+}
+
+.celeste {
+    color: #0c8db8;
+}
+
+.marron {
+    color: #463333;
+}

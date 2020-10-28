@@ -1,7 +1,11 @@
 .nav-link {
-    font-size: 20px;
-    color: white !important;
+    font-size: 18px;
+    color: #0c8db8 !important;
 }
+
+.nav-link:hover {
+    color: #d7172f !important;
+  }
 
 .navbar-collapse {
     justify-content: center,
@@ -17,7 +21,7 @@
 }
 
 img {
-    width: 140px;
+    width: 170px;
 }
 
 .avatar {
