@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AuthService } from './auth.service';
+
 import { LoginModule } from './pages/login/login.module';
 import { ForgotPasswordModule } from './pages/forgot-password/forgot-password.module';
 import { RegisterModule } from './pages/register/register.module';

@@ -27,6 +27,14 @@ const routes: Routes = [
     loadChildren: () => import('./auth/pages/permiso-denegado/permiso-denegado.module').then(m => m.PermisoDenegadoModule)
   },
   {
+    path: 'turnoReserva',
+    loadChildren: () => import('./turnos/pages/turnos-board/turnos-board.module').then(m => m.TurnosBoardModule)
+  },
+  {
+    path: 'turnoListado',
+    loadChildren: () => import('./turnos/pages/turnos-listado/turnos-listado.module').then(m => m.TurnosListadoModule)
+  },
+  {
     path: '',
     redirectTo: '/home',
     pathMatch: 'full'

@@ -11,6 +11,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 // ============================== mys modules ============================== //
 import { LayoutModule } from './layout/layout.module';
 import { AuthModule } from './auth/auth.module';
+import { TurnosModule } from './turnos/turnos.module';
+import { PacientesComponentsModule } from './pacientes/pacientes-components.module';
 
 
 @NgModule({
@@ -24,6 +26,8 @@ import { AuthModule } from './auth/auth.module';
     MaterialModule,
     LayoutModule,
     AuthModule,
+    TurnosModule,
+    PacientesComponentsModule,
     // ****************** SERVICES MODULE ************************ //
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
