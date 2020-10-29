@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AdminGuard } from './auth/guards/admin.guard';
 
 const routes: Routes = [
   {
@@ -28,11 +29,16 @@ const routes: Routes = [
   },
   {
     path: 'turnoReserva',
-    loadChildren: () => import('./turnos/pages/turnos-board/turnos-board.module').then(m => m.TurnosBoardModule)
+    loadChildren: () => import('./turnos/pages/turnos-board/turnos-board.module').then(m => m.TurnosBoardModule),
+    canActivate: [AdminGuard],
   },
   {
     path: 'turnoListado',
     loadChildren: () => import('./turnos/pages/turnos-listado/turnos-listado.module').then(m => m.TurnosListadoModule)
+  },
+  {
+    path: 'historiaClinica',
+    loadChildren: () => import('./pacientes/pages/historia-clinica/historia-clinica.module').then(m => m.HistoriaClinicaModule)
   },
   {
     path: '',

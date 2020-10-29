@@ -59,6 +59,7 @@ export class AuthService extends RoleValidator {
         password
       );
       this.updateUserData(user);
+      console.log(user);
       return user;
     } catch (error) {
       console.log(error);
