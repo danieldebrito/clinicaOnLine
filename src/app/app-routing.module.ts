@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminGuard } from './auth/guards/admin.guard';
+import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   {
     path: 'login',
-    loadChildren: () => import('./auth/pages/login/login.module').then(m => m.LoginModule)
+    loadChildren: () => import('./auth/pages/login/login.module').then(m => m.LoginModule),
+    data: {animation: 'login'}
   },
   {
     path: 'forgot-password',
@@ -13,7 +15,8 @@ const routes: Routes = [
   },
   {
     path: 'registro',
-    loadChildren: () => import('./auth/pages/register/register.module').then(m => m.RegisterModule)
+    loadChildren: () => import('./auth/pages/register/register.module').then(m => m.RegisterModule),
+    data: {animation: 'registro'}
   },
   {
     path: 'verification-email',
@@ -37,13 +40,18 @@ const routes: Routes = [
     loadChildren: () => import('./turnos/pages/turnos-listado/turnos-listado.module').then(m => m.TurnosListadoModule)
   },
   {
+    path: 'home',
+    loadChildren: () => import('./layout/home/home.module').then(m => m.HomeModule),
+    data: {animation: 'home'}
+  },
+  {
     path: 'historiaClinica',
     loadChildren: () => import('./pacientes/pages/historia-clinica/historia-clinica.module').then(m => m.HistoriaClinicaModule)
   },
   {
     path: '',
     redirectTo: '/home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   /*
     { path: 'turnoReserva', component: TurnosBoardComponent },
@@ -56,11 +64,10 @@ const routes: Routes = [
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [CommonModule, RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
 
 /*
 
