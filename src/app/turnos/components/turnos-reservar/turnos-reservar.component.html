@@ -1,33 +1,19 @@
-<p>Reservar Turno</p>
-
-<div class="mt-2">
-    <mat-form-field>
-        <mat-label>Seleccione Especialidad</mat-label>
-        <mat-select [formControl]="especialidadControl">
-            <mat-optgroup *ngFor="let group of especialidadGroups" [label]="group.name" [disabled]="group.disabled">
-                <mat-option *ngFor="let pokemon of group.pokemon" [value]="pokemon.value">
-                    {{pokemon.viewValue}}
-                </mat-option>
-            </mat-optgroup>
-        </mat-select>
-    </mat-form-field>
-
-    <br>
-
-    <mat-form-field>
-        <mat-label>Seleccione Profecional</mat-label>
-        <mat-select [formControl]="especialidadControl2">
-            <mat-optgroup *ngFor="let group of especialidadGroups2" [label]="group.name" [disabled]="group.disabled">
-                <mat-option *ngFor="let pokemon of group.pokemon" [value]="pokemon.value">
-                    {{pokemon.viewValue}}
-                </mat-option>
-            </mat-optgroup>
-        </mat-select>
-    </mat-form-field>
-
-    <br>
-
-    <div class="example-button-row">
-        <button mat-raised-button color="primary" matStepperNext>Continuar</button>
-    </div>
-</div>
+<div class="example-container mat-elevation-z8">
+    <table mat-table [dataSource]="transactions">
+      <!-- Item Column -->
+      <ng-container matColumnDef="item">
+        <th mat-header-cell *matHeaderCellDef> Item </th>
+        <td mat-cell *matCellDef="let transaction"> {{transaction.item}} </td>
+      </ng-container>
+  
+      <!-- Cost Column -->
+      <ng-container matColumnDef="cost">
+        <th mat-header-cell *matHeaderCellDef> Cost </th>
+        <td mat-cell *matCellDef="let transaction"> {{transaction.cost | currency}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+  
