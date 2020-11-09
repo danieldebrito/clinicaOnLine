@@ -9,6 +9,9 @@ export class TurnosBoardComponent implements OnInit {
   isLinear = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
+  thirdFormGroup: FormGroup;
+  fourthFormGroup: FormGroup;
+
 
   constructor(private formBuilder: FormBuilder) {}
 
