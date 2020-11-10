@@ -13,6 +13,7 @@ import { LayoutModule } from './layout/layout.module';
 import { AuthModule } from './auth/auth.module';
 import { TurnosModule } from './turnos/turnos.module';
 import { PacientesComponentsModule } from './pacientes/pacientes-components.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -28,6 +29,8 @@ import { PacientesComponentsModule } from './pacientes/pacientes-components.modu
     AuthModule,
     TurnosModule,
     PacientesComponentsModule,
+    FormsModule,
+    ReactiveFormsModule,
     // ****************** SERVICES MODULE ************************ //
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,

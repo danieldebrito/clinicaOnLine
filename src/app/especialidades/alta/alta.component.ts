@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-alta',
   templateUrl: './alta.component.html',
   styleUrls: ['./alta.component.css']
 })
-export class AltaComponent implements OnInit {
+export class AltaComponent {
 
-  constructor() { }
+  @Output() enviarIngrediente = new EventEmitter();
 
-  ngOnInit(): void {
+  itemForm = new FormGroup({
+    nombre: new FormControl(''),
+  });
+
+  constructor( ) { }
+
+  public async enviaItem() {
+    const { nombre } = this.itemForm.value;
+    this.enviarIngrediente.emit({ nombre });
   }
 
 }
