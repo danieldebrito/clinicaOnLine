@@ -49,6 +49,10 @@ const routes: Routes = [
     loadChildren: () => import('./pacientes/pages/historia-clinica/historia-clinica.module').then(m => m.HistoriaClinicaModule)
   },
   {
+    path: 'especialidades',
+    loadChildren: () => import('./especialidades/especialidades.module').then(m => m.EspecialidadesModule)
+  },
+  {
     path: '',
     redirectTo: '/home',
     pathMatch: 'full',
@@ -56,7 +60,7 @@ const routes: Routes = [
   /*
     { path: 'turnoReserva', component: TurnosBoardComponent },
      path: 'turnoListado', component: TurnosListadoComponent },
-    { path: 'historiaClinica', component: HistoriaClinicaComponent }, 
+    { path: 'historiaClinica', component: HistoriaClinicaComponent },
   */
 
 

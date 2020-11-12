@@ -5,11 +5,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [AltaComponent],
+  declarations: [
+    AltaComponent
+  ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule
+  ],
+  exports: [
+    AltaComponent
   ]
 })
 export class AltaModule { }
