@@ -31,7 +31,7 @@ export class EspecialidadesService {
   }
 
   public deleteItem(Item: Especialidad) {
-    this.ItemDoc = this.db.doc(`materias/${Item.idEspecialidad}`);
+    this.ItemDoc = this.db.doc(`especialidades/${Item.idEspecialidad}`);
     this.ItemDoc.delete();
   }
 
@@ -40,7 +40,7 @@ export class EspecialidadesService {
   }
 
   public updateItem(Item: Especialidad) {
-    this.ItemDoc = this.db.doc(`materias/${Item.idEspecialidad}`);
+    this.ItemDoc = this.db.doc(`especialidades/${Item.idEspecialidad}`);
     this.ItemDoc.update(Item);
   }
 }
