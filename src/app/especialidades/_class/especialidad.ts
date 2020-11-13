@@ -1,6 +1,6 @@
 export class Especialidad {
     constructor(
-        public idEspecialidad?: string,
+        public id?: string,
         public nombreEspecialidad?: string
     ) { }
 }

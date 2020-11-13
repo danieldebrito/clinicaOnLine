@@ -11,14 +11,14 @@ export class AltaComponent {
   @Output() enviarIngrediente = new EventEmitter();
 
   itemForm = new FormGroup({
-    nombre: new FormControl(''),
+    nombreEspecialidad: new FormControl(''),
   });
 
   constructor( ) { }
 
   public async enviaItem() {
-    const { nombre } = this.itemForm.value;
-    this.enviarIngrediente.emit({ nombre });
+    const { nombreEspecialidad } = this.itemForm.value;
+    this.enviarIngrediente.emit({ nombreEspecialidad });
   }
 
 }

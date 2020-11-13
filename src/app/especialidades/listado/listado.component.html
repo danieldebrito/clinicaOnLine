@@ -8,7 +8,7 @@
   </thead>
   <tbody>
       <tr *ngFor="let item of especialidades">
-          <td> {{ item.idEspecialidad }} </td>
+          <td> {{ item.id }} </td>
           <td> {{ item.nombreEspecialidad }} </td>
           <td> <button type="button" class="btn btn-danger" (click)="enviarDeleteItem(item)"><i class="fa fa-trash"></i></button> </td>
       </tr>

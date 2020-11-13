@@ -14,6 +14,7 @@ export class EspecialidadesComponent implements OnInit {
   constructor(private EspecialidadesSrv: EspecialidadesService) { }
 
   public addMateria(item) {
+    console.log(item);
     this.EspecialidadesSrv.addItem(item);
   }
 
@@ -22,8 +23,8 @@ export class EspecialidadesComponent implements OnInit {
     this.EspecialidadesSrv.updateItem(item);
   }
 
-  public deleteMateria(item) {
-    this.EspecialidadesSrv.deleteItem(item);
+  public deleteMateria(event) {
+    this.EspecialidadesSrv.deleteItem(event.item);
   }
 
   public async getItems() {

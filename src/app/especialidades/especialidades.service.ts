@@ -13,14 +13,12 @@ export class EspecialidadesService {
   ItemDoc: AngularFirestoreDocument<Especialidad>;
   Items: Observable<Especialidad[]>;
 
-  public cantCarritoItems: number;
-
   constructor(public db: AngularFirestore) {
     this.ItemsCollection = this.db.collection('especialidades');
     this.Items = this.ItemsCollection.snapshotChanges().pipe(map(actions => {
       return actions.map(a => {
         const data = a.payload.doc.data() as Especialidad;
-        data.idEspecialidad = a.payload.doc.id;
+        data.id = a.payload.doc.id;
         return data;
       });
     }));
@@ -31,7 +29,7 @@ export class EspecialidadesService {
   }
 
   public deleteItem(Item: Especialidad) {
-    this.ItemDoc = this.db.doc(`especialidades/${Item.idEspecialidad}`);
+    this.ItemDoc = this.db.doc(`especialidades/${Item.id}`);
     this.ItemDoc.delete();
   }
 
@@ -40,7 +38,7 @@ export class EspecialidadesService {
   }
 
   public updateItem(Item: Especialidad) {
-    this.ItemDoc = this.db.doc(`especialidades/${Item.idEspecialidad}`);
+    this.ItemDoc = this.db.doc(`especialidades/${Item.id}`);
     this.ItemDoc.update(Item);
   }
 }
