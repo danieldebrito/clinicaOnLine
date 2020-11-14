@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EspecialidadesService } from './especialidades.service';
-import { Especialidad } from './_class/especialidad';
+import { Especialidad } from './components/_class/especialidad';
 
 @Component({
   selector: 'app-especialidades',

@@ -4,6 +4,7 @@ import { MaterialModule } from './material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // ============================== FIREBASE ==================================== //
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
@@ -13,7 +14,7 @@ import { LayoutModule } from './layout/layout.module';
 import { AuthModule } from './auth/auth.module';
 import { TurnosModule } from './turnos/turnos.module';
 import { PacientesComponentsModule } from './pacientes/pacientes-components.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdminModule } from './admin/admin.module';
 
 
 @NgModule({
@@ -25,15 +26,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    LayoutModule,
-    AuthModule,
-    TurnosModule,
-    PacientesComponentsModule,
     FormsModule,
     ReactiveFormsModule,
     // ****************** SERVICES MODULE ************************ //
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
+    // ****************** mys MODULES ************************ //
+    LayoutModule,
+    AuthModule,
+    TurnosModule,
+    AdminModule,
+    PacientesComponentsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

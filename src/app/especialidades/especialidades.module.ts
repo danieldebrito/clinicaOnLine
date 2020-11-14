@@ -4,8 +4,8 @@ import { CommonModule } from '@angular/common';
 import { EspecialidadesRoutingModule } from './especialidades-routing.module';
 import { EspecialidadesComponent } from './especialidades.component';
 
-import { AltaModule } from './alta/alta.module';
-import { ListadoModule } from './listado/listado.module';
+import { AltaModule } from './components/alta/alta.module';
+import { ListadoModule } from './components/listado/listado.module';
 
 
 @NgModule({

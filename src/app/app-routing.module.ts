@@ -5,6 +5,11 @@ import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full',
+  },
+  {
     path: 'login',
     loadChildren: () => import('./auth/pages/login/login.module').then(m => m.LoginModule),
     data: {animation: 'login'}
@@ -53,10 +58,10 @@ const routes: Routes = [
     loadChildren: () => import('./especialidades/especialidades.module').then(m => m.EspecialidadesModule)
   },
   {
-    path: '',
-    redirectTo: '/home',
-    pathMatch: 'full',
-  },
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+  }
+
   /*
     { path: 'turnoReserva', component: TurnosBoardComponent },
      path: 'turnoListado', component: TurnosListadoComponent },
@@ -68,7 +73,7 @@ const routes: Routes = [
 
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forRoot(routes)],
+  imports: [CommonModule, RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Especialidad } from './_class/especialidad';
+import { Especialidad } from './components/_class/especialidad';
 
 @Injectable({
   providedIn: 'root'
