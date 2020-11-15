@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminGuard } from './auth/guards/admin.guard';
 import { CommonModule } from '@angular/common';
 
+import { AdminComponent } from './admin/admin.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -12,7 +14,7 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./auth/pages/login/login.module').then(m => m.LoginModule),
-    data: {animation: 'login'}
+    data: { animation: 'login' }
   },
   {
     path: 'forgot-password',
@@ -21,7 +23,7 @@ const routes: Routes = [
   {
     path: 'registro',
     loadChildren: () => import('./auth/pages/register/register.module').then(m => m.RegisterModule),
-    data: {animation: 'registro'}
+    data: { animation: 'registro' }
   },
   {
     path: 'verification-email',
@@ -47,7 +49,7 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./layout/home/home.module').then(m => m.HomeModule),
-    data: {animation: 'home'}
+    data: { animation: 'home' }
   },
   {
     path: 'historiaClinica',
@@ -59,24 +61,39 @@ const routes: Routes = [
   },
   {
     path: 'admin',
-    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+    component: AdminComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./informes/informes.module').then(m => m.InformesModule)
+      }
+      ,
+      {
+        path: 'informes',
+        loadChildren: () => import('./informes/informes.module').then(m => m.InformesModule)
+      },
+      {
+        path: 'especialidades',
+        loadChildren: () => import('./especialidades/especialidades.module').then(m => m.EspecialidadesModule)
+      }
+    ]
   }
-
-  /*
-    { path: 'turnoReserva', component: TurnosBoardComponent },
-     path: 'turnoListado', component: TurnosListadoComponent },
-    { path: 'historiaClinica', component: HistoriaClinicaComponent },
-  */
-
-
 ]
-
 
 @NgModule({
   imports: [CommonModule, RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+/*
+  { path: 'turnoReserva', component: TurnosBoardComponent },
+   path: 'turnoListado', component: TurnosListadoComponent },
+  { path: 'historiaClinica', component: HistoriaClinicaComponent },
+*/
+
+
 
 /*
 
