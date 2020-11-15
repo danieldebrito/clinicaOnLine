@@ -14,7 +14,7 @@
 <div class="container mt-3">
   <ul class="list-group p-1" *ngFor="let item of menuItems | async ; let i=index">
     <li class="list-group-item">
-      <a mat-raised-button color="primary" [routerLink]="item.redirectTo">{{ item.name }}</a>
+      <a mat-raised-button color="primary" [routerLink]="item.redirectTo" (click)="closeNav()">{{ item.name }} </a>
     </li>
   </ul>
 </div>

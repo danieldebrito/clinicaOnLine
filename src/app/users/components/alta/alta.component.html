@@ -1,0 +1,13 @@
+<div class="container p-2">
+  <form [formGroup]="itemForm" (ngSubmit)="enviaItem()">
+      <label for="inputEmail" class="sr-only">
+          Alta de Usuario
+      </label>
+      <div class="p-2">
+          <input type="text" id="nombreEspecialidad" class="form-control" placeholder="Especialidad" formControlName="nombreEspecialidad" required autofocus>
+      </div>
+      <div class="p-2">
+          <button class="btn btn-lg btn-success btn-block" type="submit">Guardar</button>
+      </div>
+  </form>
+</div>

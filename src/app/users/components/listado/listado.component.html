@@ -1,0 +1,19 @@
+<table class="table table-bordered">
+  <thead>
+      <tr>
+          <th scope="col">id</th>
+          <th scope="col">nombre</th>
+          <th scope="col">email</th>
+          <th scope="col">Accion</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let item of items">
+          <td> {{ item.uid }} </td>
+          <td> {{ item.nombre }} </td>
+          <td> {{ item.email }} </td>
+          <td> <button type="button" class="btn btn-danger" (click)="enviarDeleteItem(item)"><i class="fa fa-trash"></i></button> </td>
+      </tr>
+  </tbody>
+</table>
+

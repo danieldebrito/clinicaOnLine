@@ -10,11 +10,9 @@
     "img": "/assets/games/adivina.jpg"
   },
   {
-    "name": "ppt",
-    "redirectTo": "ppt",
-    "img": "/assets/games/ppt.jpg",
-    "detalle": "piedra papel o tijera",
-    "descripcion": "El clasico juego"
+    "name": "Usuarios",
+    "redirectTo": "usuarios",
+    "img": "/assets/games/ppt.jpg"
   },
   {
     "name": "tateti",
