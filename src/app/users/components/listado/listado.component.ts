@@ -10,11 +10,16 @@ export class ListadoComponent implements OnInit {
 
   @Input() items: User[] = [];
   @Output() enviarItem = new EventEmitter();
+  @Output() enviarItemDetalleItem = new EventEmitter();
 
   constructor() { }
 
   public enviarDeleteItem(item){
     this.enviarItem.emit({ item });
+  }
+
+  public enviarDetalleItem(item) {
+    this.enviarItemDetalleItem.emit({ item });
   }
 
   ngOnInit(): void {

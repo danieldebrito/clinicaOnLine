@@ -6,7 +6,7 @@ import { UsersComponent } from './users.component';
 
 import { AltaModule } from './components/alta/alta.module';
 import { ListadoModule } from './components/listado/listado.module';
-
+import { DetalleModule } from './components/detalle/detalle.module';
 
 @NgModule({
   declarations: [UsersComponent],
@@ -14,7 +14,8 @@ import { ListadoModule } from './components/listado/listado.module';
     CommonModule,
     UsersRoutingModule,
     AltaModule,
-    ListadoModule
+    ListadoModule,
+    DetalleModule
   ]
 })
 export class UsersModule { }

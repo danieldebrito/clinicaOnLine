@@ -13,11 +13,10 @@ export class ListadoComponent implements OnInit {
 
   constructor() { }
 
-  public enviarDeleteItem(item){
+  public enviarDeleteItem(item) {
     this.enviarIdIngrediente.emit({ item });
   }
 
   ngOnInit(): void {
   }
-
 }

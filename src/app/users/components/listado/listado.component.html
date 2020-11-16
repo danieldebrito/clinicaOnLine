@@ -4,7 +4,8 @@
           <th scope="col">id</th>
           <th scope="col">nombre</th>
           <th scope="col">email</th>
-          <th scope="col">Accion</th>
+          <th scope="col">Borrar</th>
+          <th scope="col">Detalle</th>
       </tr>
   </thead>
   <tbody>
@@ -13,6 +14,7 @@
           <td> {{ item.nombre }} </td>
           <td> {{ item.email }} </td>
           <td> <button type="button" class="btn btn-danger" (click)="enviarDeleteItem(item)"><i class="fa fa-trash"></i></button> </td>
+          <td> <button type="button" class="btn btn-primary" (click)="enviarDetalleItem(item)"><i class="fa fa-user"></i></button> </td>
       </tr>
   </tbody>
 </table>

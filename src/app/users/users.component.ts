@@ -10,6 +10,7 @@ import { User } from './_class/user';
 export class UsersComponent implements OnInit {
 
   public users: User[] = [];
+  public user: User = {};
 
   constructor(private UsuariosSrv: UsuariosService) { }
 
@@ -25,6 +26,10 @@ export class UsersComponent implements OnInit {
 
   public deleteMateria(event) {
     this.UsuariosSrv.deleteItem(event.item);
+  }
+
+  public mostrarItem(event){
+    this.user = event.item;
   }
 
   public async getItems() {

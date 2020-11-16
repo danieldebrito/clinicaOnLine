@@ -3,11 +3,11 @@
 </div>
 <div class="container">
   <div class="row">
-      <div class="col-sm-6">
-          <app-alta (enviarIngrediente)="addMateria($event)"></app-alta>
+      <div class="col-sm-8">
+          <app-listado (enviarIdIngrediente)="deleteMateria($event)" (enviarItemDetalleItem)="mostrarItem($event)" [items]="users"></app-listado>
       </div>
-      <div class="col-sm-6">
-          <app-listado (enviarIdIngrediente)="deleteMateria($event)" [items]="users"></app-listado>
+      <div class="col-sm-4">
+        <app-detalle [user]="user" ></app-detalle>
       </div>
   </div>
 </div>

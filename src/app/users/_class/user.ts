@@ -8,6 +8,7 @@ export class User {
         public pass?: string,
         public photoURL1?: string,
         public photoURL2?: string,
+        public estado?: string,
         public role?: string
     ) { }
 }
