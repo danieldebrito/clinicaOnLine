@@ -4,6 +4,7 @@ import { AdminGuard } from './auth/guards/admin.guard';
 import { CommonModule } from '@angular/common';
 
 import { AdminComponent } from './admin/admin.component';
+import { ProfesionalesComponent } from './profesionales/profesionales.component';
 
 const routes: Routes = [
   {

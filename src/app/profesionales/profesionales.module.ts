@@ -3,10 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { ProfesionalesRoutingModule } from './profesionales-routing.module';
 import { ProfesionalesComponent } from './profesionales.component';
-
+import { ItemsSideBarComponent } from './components/items-side-bar/items-side-bar.component';
 
 @NgModule({
-  declarations: [ProfesionalesComponent],
+  declarations: [
+    ProfesionalesComponent,
+    ItemsSideBarComponent
+  ],
   imports: [
     CommonModule,
     ProfesionalesRoutingModule

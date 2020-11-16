@@ -1,0 +1,45 @@
+[
+  {
+    "name": "informes",
+    "redirectTo": "informes",
+    "img": "/assets/games/agilidad.jpg"
+  },
+  {
+    "name": "especialidades",
+    "redirectTo": "especialidades",
+    "img": "/assets/games/adivina.jpg"
+  },
+  {
+    "name": "Usuarios",
+    "redirectTo": "usuarios",
+    "img": "/assets/games/ppt.jpg"
+  },
+  {
+    "name": "tateti",
+    "redirectTo": "tateti",
+    "img": "/assets/games/tateti.jpg",
+    "detalle": "ta te ti",
+    "descripcion": "Antes lo jugabas en papel, ahora digital"
+  },
+  {
+    "name": "anagrama",
+    "redirectTo": "anagrama",
+    "img": "/assets/games/anagrama.jpg",
+    "detalle": "Anagrama",
+    "descripcion": "Busca la palabra mezclada entre cientos de posibilidades"
+  },
+  {
+    "name": "memotest",
+    "redirectTo": "memotest",
+    "img": "/assets/games/memotest.jpg",
+    "detalle": "Memotest",
+    "descripcion": "Alcoyana Alcoyama"
+  },
+  {
+    "name": "casaca",
+    "redirectTo": "casaca",
+    "img": "/assets/games/casaca.jpg",
+    "detalle": "Adiviná la casaca",
+    "descripcion": "Que sabes e casacas de futbol mundiales?"
+  }
+]

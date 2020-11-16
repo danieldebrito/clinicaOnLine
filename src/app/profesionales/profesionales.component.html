@@ -1,1 +1,9 @@
-<p>profesionales works!</p>
+<div id="mySidenav" class="sidenav mt-2">
+  <a href="javascript:void(0)" (click)="closeNav()">&#9776;  Cerrar Menu</a>
+  <app-items-side-bar></app-items-side-bar>
+</div>
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776; Abrir Menu</span>
+  <router-outlet></router-outlet>
+</div>

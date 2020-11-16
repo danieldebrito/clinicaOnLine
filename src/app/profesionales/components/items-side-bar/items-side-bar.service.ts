@@ -15,6 +15,6 @@ export class ItemsSideBarService {
   constructor( private http: HttpClient ) { }
 
   getGamesMenuItems(): any{
-    return this.http.get<GamesMenuItem[]>('/assets/menus/adminSidebar/items-menu-admin.json');
+    return this.http.get<GamesMenuItem[]>('/assets/menus/adminSidebar/items-menu-prof.json');
   }
 }
