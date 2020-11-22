@@ -7,7 +7,6 @@ import { EspecialidadesComponent } from './especialidades.component';
 import { AltaModule } from './components/alta/alta.module';
 import { ListadoModule } from './components/listado/listado.module';
 
-
 @NgModule({
   declarations: [
     EspecialidadesComponent

@@ -82,6 +82,30 @@ const routes: Routes = [
         loadChildren: () => import('./users/users.module').then(m => m.UsersModule)
       }
     ]
+  },
+  {
+    path: 'profecionales',
+    component: ProfesionalesComponent,
+    children: [
+      /*
+      {
+        path: '',
+        loadChildren: () => import('./informes/informes.module').then(m => m.InformesModule)
+      }
+      ,
+      {
+        path: 'informes',
+        loadChildren: () => import('./informes/informes.module').then(m => m.InformesModule)
+      },
+      {
+        path: 'especialidades',
+        loadChildren: () => import('./especialidades/especialidades.module').then(m => m.EspecialidadesModule)
+      },
+      {
+        path: 'usuarios',
+        loadChildren: () => import('./users/users.module').then(m => m.UsersModule)
+      }*/
+    ]
   }
 ]
 
