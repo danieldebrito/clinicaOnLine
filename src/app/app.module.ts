@@ -15,6 +15,7 @@ import { AuthModule } from './auth/auth.module';
 import { TurnosModule } from './turnos/turnos.module';
 import { PacientesComponentsModule } from './pacientes/pacientes-components.module';
 import { AdminModule } from './admin/admin.module';
+import { ProfesionalesModule } from './profesionales/profesionales.module';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { AdminModule } from './admin/admin.module';
     TurnosModule,
     AdminModule,
     PacientesComponentsModule,
+    ProfesionalesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
